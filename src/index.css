@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #faf9f7;
+  --color-ink: #1a1917;
+  --color-muted: #6b655c;
+  --color-line: #e3e0da;
+  --color-accent: #1f3a5f;
+  --color-high: #a31d1d;
+  --color-medium: #9a6a00;
+  --color-low: #2e6b3e;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+html, body {
+  overflow-x: clip;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings are always roman — no italic headers (AI tell) */
+h1, h2, h3 { font-style: normal; }
+
+/* Subtle focus ring, visible on keyboard nav */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
